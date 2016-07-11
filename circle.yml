@@ -5,4 +5,4 @@ deployment:
   production:
     branch: master
     commands:
-      - curl -X POST https://api.newrelic.com/v2/applications/123/deployments.json -H 'X-Api-Key: fakekey' -i -H 'Content-Type: application/json' -d '{"deployment":{"revision":"Test"}}' -v --trace-ascii /dev/stdout
+      - curl -X POST https://api.newrelic.com/v2/applications/123/deployments.json -v --trace-ascii /dev/stdout
