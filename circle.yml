@@ -5,4 +5,4 @@ deployment:
   production:
     branch: master
     commands:
-      - curl -X POST https://api.newrelic.com/v2/applications/19789137/deployments.json -H 'Content-Type:application/json' -H 'X-Api-Key:69ee32549fcde1c4e1744ca320ff2240160c8209cc21eac' -d '{"deployment":{"revision": "Test"}}' -v --trace-ascii /dev/stdout
+      - ./new_relic_deploy.sh
