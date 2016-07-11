@@ -1,0 +1,6 @@
+deployment:
+  production:
+    branch: master
+    commands:
+      - NEW_RELIC_RECORD_DEPLOY="curl -X POST \"https://api.newrelic.com/v2/applications/${NEW_RELIC_APPLICATION_ID}/deployments.json\" -H \"X-Api-Key:${NEW_RELIC_API_KEY}\" -i -H \"Content-Type: application/json\" -d \"{\"deployment\":{\"revision\":\"CircleCI\ Build\ ${CIRCLE_BUILD_NUM}\"}}\" -v --trace-ascii /dev/stdout"
+      - bash -c "$NEW_RELIC_RECORD_DEPLOY"
