@@ -1,3 +1,6 @@
+test:
+  override:
+    - FAKE=faking
 deployment:
   production:
     branch: master
