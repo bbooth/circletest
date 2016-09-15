@@ -6,4 +6,4 @@ deployment:
     branch: master
     commands:
       - "curl https://github.com/cloudfoundry/java-buildpack-memory-calculator/releases/download/v2.0.1.RELEASE/java-buildpack-memory-calculator-linux.tar.gz > /tmp/java-buildpack-memory-calculator-linux.tar.gz"
-      - "tar -xzv /tmp/java-buildpack-memory-calculator-linux.tar.gz"
+      - "tar -xzvf /tmp/java-buildpack-memory-calculator-linux.tar.gz"
