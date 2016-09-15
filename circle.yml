@@ -7,7 +7,4 @@ deployment:
     commands:
       - "curl -L https://github.com/cloudfoundry/java-buildpack-memory-calculator/releases/download/v2.0.1.RELEASE/java-buildpack-memory-calculator-linux.tar.gz | tar -vxz"
       - "chmod +x java-buildpack-memory-calculator-linux"
-      - "TEST=brad"
-      - "CALCULATED_MEMORY=$(./java-buildpack-memory-calculator-linux -memoryWeights=heap:75,metaspace:10,native:10,stack:5 -memoryInitials=heap:100%,metaspace:100% -totMemory=1024m)"
-      - "echo $TEST"
-      - "echo $CALCULATED_MEMORY"
+      - "CALCULATED_MEMORY=$(./java-buildpack-memory-calculator-linux -memoryWeights=heap:75,metaspace:10,native:10,stack:5 -memoryInitials=heap:100%,metaspace:100% -totMemory=1024m) & echo $CALCULATED_MEMORY"
